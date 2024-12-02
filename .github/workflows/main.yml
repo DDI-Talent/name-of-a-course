@@ -30,6 +30,7 @@ jobs:
         cp -r ./scormcontent/* ./ || echo "Folder scormcontent not found in main"
         rm -rf ./scormcontent
 
+        git config --global http.postBuffer 157286400
         # Commit and push changes
         git add .
         git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
